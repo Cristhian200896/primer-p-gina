@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es.PE">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Restaurante</title>
+        <meta name="Un Restaurante" content="Muestra sobre comidas, direcciones y más">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    
+        <nav class="navegacion">
+            <div class="logocontainer">
+                <img src="../imagen (2).jpg" alt="Banner de restaurante" class="logoimagen">
+            </div>
+
+            <ul class="menuprincipal">
+                <li class="tienedesplegable">
+                    <details class="contenedordesplegable" name="menurestaurante">
+                    <summary class="botonpadre">CARTA 🠗</summary>
+                    <ul class="submenu">
+                        <li><a href="#">CARTA</a></li>
+                        <li><a href="#">POLLOS A LA BRASA</a></li>
+                        <li><a href="#">ALMUERZOS</a></li>
+                    </ul>
+                    </details> 
+                </li>
+            <ul class="menuprincipal">
+                <li class="tienedesplegable">
+                    <details class="contenedordesplegable" name="menurestaurante">
+                    <summary class="botonpadre">BAR 🠗</summary>
+                    <ul class="submenu">
+                        <li><a href="#">CARTA BAR</a></li>
+                    </ul>
+                    </details> 
+                </li>
+            <ul class="menuprincipal">
+                <li class="tienedesplegable">
+                    <details class="contenedordesplegable" name="menurestaurante">
+                    <summary class="botonpadre">DELIVERY 🠗</summary>
+                    <ul class="submenu">
+                        <li><a href="#">DELIVERY</a></li>
+                    </ul>
+                    </details> 
+                </li>
+
+                <li class="tienedesplegable">
+                    <a href="../Restaurantetodo/Reservas.html" class="botonpadre linkdirecto">RESERVAS</a>
+                </li>
+                
+                </ul>
+        </nav>
+        <section class="botondentroimagen">
+            <img src="../imagen (1).jpg" alt="Fondo Restaurante" class="fondoimagen">
+
+            <div class="contenedorboton">
+                <a href="../CartaComida.html" class="btn botoncomidas">Carta Comida</a>
+                <a href="../CartaBar.html" class="btn botonbar">Carta Bar</a>
+            </div>
+        </section>
+
+        <script>
+            // Escuchamos los clics en toda la pantalla
+            document.addEventListener('click', function (evento) {
+                // Buscamos todos los menús desplegables que tengan el atributo name
+                const menus = document.querySelectorAll('details[name="menurestaurante"]');
+            
+                menus.forEach(menu => {
+                    // Si el clic NO fue dentro del menú que está abierto, lo cerramos
+                    if (!menu.contains(evento.target)) {
+                        menu.removeAttribute('open');
+                    }
+                });
+            });
+        </script>
+        
+        <footer class="piepagina">
+            <div class="contenedorfooter">
+        
+            <div class="imagenencima">
+                <img src="../imagen (1).jpg" alt="Banner del Restaurante">
+            </div>
+
+        <div class="bloquecolumnastextos">
+
+        <div class="columnaizquierda">
+            <h3 class="tituloseccion">ATENCIÓN EN LOCAL:</h3>
+            <p class="textomenu">Domingo a jueves: Ingreso de 12:00 p.m. a 11:00 p.m.</p>
+            <p class="textomenu">Viernes y sábado: Ingreso de 12:00 p.m. a 11:30 p.m.</p>
+            
+            <h3 class="tituloseccion mt2">PARA LLEVAR:</h3>
+            <p class="textomenu">Domingo a jueves de 12:00 p.m. a 11:30 p.m.</p>
+            <p class="textomenu">Viernes y sábado de 12:00 p.m. a 12:00 a.m.</p>
+            
+            <div class="textobuenastardes">
+                <p>Hola, buenas tardes a todos.</p>
+                <p>Es un gusto saludarles. Esperamos que disfruten de su visita.</p>
+            </div>
+        </div>
+        </div>
+
+        <div class="columnaderecha">
+            <div class="enlaceslegales">
+                <a href="#">Libro de reclamaciones</a>
+                <a href="#">Política de privacidad</a>
+            </div>
+            
+            <h2 class="titulodireccion">Dirección</h2>
+            <p class="textodireccion">Av. Universitaria Norte 10481 – Urb. San Felipe – Comas</p>
+            <p class="textodireccion">Av. Micaela Bastidas Mz E2 Lt5 Urb. El Alamo – Comas</p>
+            
+            <p class="copyright">©2026 Gio's Restaurante. Todos los Derechos Reservados.</p>
+
+            <div class="textobuenasnoches">
+                <p>Hola, buenas noches. Esperamos que pasen una velada maravillosa y vuelvan pronto.</p>
+            </div>
+        </div>
+    </div>
+</div>
+    </footer>
+    <!--boton flotante de wasap-->
+    <!--Reemplaza +51 955 035 726-->
+    <a href="https://api.whatsapp.com/send/?phone=51955035726&text=Hola,+mariconaza+no+te+olvides+de+mi+pesiduri" class="botonwasap" target="_blank">
+        <img src="https://static.vecteezy.com/system/resources/previews/016/716/480/non_2x/whatsapp-icon-free-png.png" alt="WhatsApp">
+        <span class="tooltipwasap">¿En qué se te puede ayudar?</span>
+    </a>
+    </body>
+    </html>

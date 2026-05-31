@@ -1,0 +1,371 @@
+/* Limpieza de márgenes por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    padding: 20px;
+    background-color: #f4f4f4; /* Puedes cambiar esto por tu imagen de fondo luego */
+}
+
+/* Barra de navegación principal (El fondo crema de tu foto) */
+.navegacion {
+    background-color: #e8e4d9; /* Tono beige/crema exacto de tu captura */
+    align-items: center;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Contenedor de la lista */
+.menuprincipal {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+/* Posicionamiento base para cada pestaña */
+.menuprincipal > li {
+    position: relative; 
+    margin: 0 25px;
+}
+
+/* Estilo para los enlaces simples (BAR, DELIVERY, RESERVAS) */
+.menuprincipal > li > a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    display: block;
+}
+
+.tienedesplegable {
+    position: relative;
+}
+
+/* --- EL BOTÓN DESPLEGABLE (CARTA) --- */
+
+/* Quita las flechas nativas del elemento <details> */
+.botonpadre {
+    text-transform: uppercase;
+    color: #333333;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+}
+
+.botonpadre::-webkit-details-marker {
+    display: none;
+}
+
+/* Cambio de color grisáceo al pasar el mouse por encima de los botones principales */
+.botonpadre:hover,
+.menuprincipal > li > a:hover {
+    color: #666666;
+}
+
+/* --- EL CUADRO DESPLEGABLE DE PLATOS --- */
+.submenu {
+    position: absolute;
+    top: 100%; /* Empuja el menú flotante justo abajo de la barra */
+    left: 0;
+    border-radius: 4px;
+    background-color: #ffffff;
+    min-width: 250px;
+    list-style: none;
+    margin: 0;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+    border: 1px solid #cccccc;
+    z-index: 1000;
+    padding: 10px 0;
+    }
+
+/* Enlaces internos del cuadro blanco */
+.submenu li a {
+    text-decoration: none;
+    color: #1a3a5f; /* Azul oscuro elegante */
+    font-size: 12px;
+    font-weight: bold;
+    padding: 14px 18px;
+    display: block;
+    border-bottom: 1px solid #eeeeee;
+    text-transform: uppercase;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.submenu li:last-child a {
+    border-bottom: none;
+}
+
+/* Reacción al seleccionar una opción de la lista (Naranja de tu diseño original) */
+.submenu li a:hover {
+    background-color: #c67a32;
+    color: #ffffff;
+}
+/* --- CONFIGURACIÓN GENERAL DEL PIE DE PÁGINA OSCURO --- */
+.piepagina {
+    background-color: #2c3033; /* El fondo gris oscuro/negro de la foto original */
+    width: 100%;
+    font-family: Arial, sans-serif;
+    padding-bottom: 40px;
+    padding-top: 20px;
+}
+
+/* El contenedor mágico que separa las dos columnas a los extremos */
+.contenedorfooter {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.75), url(../imagen.jpg));
+    background-size: cover;
+    background-position: center center;
+    background-repeat: 60px 40px;
+    color: #ffffff;
+    padding: 80px 60px 50px 60px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* --- ESTILOS COLUMNA IZQUIERDA (Atención y Llevar) --- */
+.columnaizquierda {
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
+}
+
+/* --- EL BLOQUE DE TEXTOS INFERIORES --- */
+.bloquecolumnastextos {
+    display: flex;
+    justify-content: space-between; /* Envía una columna al extremo izquierdo y otra al derecho */
+    align-items: flex-start;
+    width: 100%;
+}
+
+.imagenencima {
+    max-width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.imagenencima img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px; /* Bordes ligeramente suaves opcionales */
+}
+
+.tituloseccion {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 6px;
+    line-height: 1.6;
+}
+
+.mt2 {
+    margin-top: 20px; /* Separa 'Para llevar' de la lista de arriba */
+}
+
+.textomenu {
+    color: #b0b3b5; /* Gris claro para que sea legible */
+    font-size: 13.5px;
+    line-height: 1.5;
+    margin-bottom: 4px;
+}
+
+.textobuenastardes{
+    margin-top: 25px;
+}
+
+.textobuenastardes p {
+    color: #ffffff;
+    font-size: 13.5px;
+    line-height: 1.5;
+    margin-top: 25px;
+}
+
+/* --- ESTILOS COLUMNA DERECHA (Dirección y Enlaces) --- */
+.columnaderecha {
+    text-align: right; /* Alinea todo el texto hacia la derecha */
+    max-width: 100%;
+    flex: 1;
+}
+
+.enlaceslegales a {
+    color: #b0b3b5;
+    font-size: 13px;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.enlaceslegales a:hover{
+    text-decoration: underline;
+}
+
+.titulodireccion {
+    color: #ffffff;
+    font-size: 22px;
+    font-style: italic; /* Letra inclinada elegante como tu diseño */
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.textodireccion {
+    color: #b0b3b5;
+    font-size: 13.5px;
+    margin-bottom: 6px;
+    line-height: 1.5;
+}
+
+.copyright {
+    color: #888888;
+    font-size: 12px;
+    margin-top: 20px;
+    margin-bottom: 6px;
+}
+
+.textobuenasnoches p {
+    color: #ffffff;
+    font-size: 13.5px;
+}
+
+.logoimagen {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+
+.logocontainer {
+    display: flex;
+    align-items: center;
+}
+
+.botondentroimagen {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.fondoimagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+}
+
+.contenedorboton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 20px;
+    display: flex;
+    z-index: 10;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 35px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    transform: scale(1.5);
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.4);
+}
+
+.botoncomidas {
+    background-color: #888888;
+    color: black;
+}
+
+.botonbar {
+    background-color: #888888;
+    color: black;
+}
+
+.botonwasap {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    z-index: 1000;
+}
+
+.botonwasap img {
+    width: 50%;
+    height: 50px;
+    background-color: #1a3a5f;
+    border-radius:60%;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3 ease;
+}
+
+/* El icono crece un poquito al pasar el mouse */
+.botonwasap:hover img {
+    transform: scale(1.1);
+}
+
+/* --- EL GLOBITO DE TEXTO (OCULTO POR DEFECTO) --- */
+.tooltipwasap {
+    background-color: #ffffff;
+    color: #4a4a4a;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-right: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    order: 1;                 /* Lo mantiene a la izquierda de la imagen */
+    position: relative;
+    white-space: nowrap;
+    
+    /* ESTO HACE QUE SEA INVISIBLE DE INICIO */
+    opacity: 0;                
+    visibility: hidden;
+    transform: translateX(10px); /* Pequeño desplazamiento inicial */
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+/* --- EFECTO HOVER: APARECE CUANDO PASAS EL MOUSE --- */
+.botonwasap:hover .tooltipwasap {
+    opacity: 1;                /* Se vuelve totalmente visible */
+    visibility: visible;
+    transform: translateX(0);  /* Se desliza suavemente a su posición original */
+}
+
+/* Pequeña colita/flecha del globo de diálogo */
+.tooltipwasap::after {
+    content: '';
+    position: absolute;
+    right: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-width: 8px 0 8px 8px;
+    border-style: solid;
+    border-color: transparent transparent transparent #ffffff;
+}
+
+/* --- ESTILO PARA EL ENLACE DIRECTO DE RESERVAS --- */
+.linkdirecto {
+    text-decoration: none;    /* ¡Adiós al subrayado azul! */
+    display: inline-block;     /* Permite que tome los márgenes y tamaños correctos */
+}
+
+/* Asegura que cuando pases el mouse por encima cambie al mismo color que los otros botones */
+.linkdirecto:hover {
+    color: #ffcc00;            /* Cambia esto si usas un color diferente al dorado para el hover */
+}
